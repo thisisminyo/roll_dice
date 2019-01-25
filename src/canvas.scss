@@ -1,0 +1,95 @@
+//Setting the colors we're syncing up with
+$pixel-color-map: (
+    'o' : red,
+    'x' : transparent 
+);
+
+//Size of the pixels
+$pixel-size: 10px !default;
+
+//Pixel art matrix
+$pixel-art:(
+    diamond: (
+        (x x o x x)
+        (x o x o x)
+        (o x x x o)
+        (x o x o x)
+        (x x o x x)
+    ),
+);
+
+//Function to read the matrix and pixelize it
+@function pixelize($matrix, $size){
+    $l : length($matrix); //length of the entire
+    $sh : ''; //shadows pixel section
+    $i : $l; //length of the line on a matrix
+
+    //read through the all the rows of the pixel
+    @for $i from 1 through $l {
+        $row : nth($matrix, $i); //this is a single row
+
+        @for $j from 1 through length($row){
+            $item : nth($row, $j); //itemize each element in that row
+
+            //if that item is an x, give it a drop shadow square w/background color (this is where we're building the shadows list)
+            @if map-has-key($pixel-color-map, $item){
+                $sh : $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, $item);
+            } @else {
+                @warn 'there is no color specified in "pixel-color-map" for: "#{$item}"';
+            }
+
+            //when you get to the end of the row, add a comma before the next block of drop shadows
+            @if not ($j == length($row) and $i == $l) {
+                $sh : $sh + ',';
+            }
+        }
+    }
+
+    //return the entire shadow list here
+    @return unquote($sh);
+}
+
+//Mixin to style each item
+@mixin style-item($matrix, $size) {
+    position: relative; // pixels stack next to each other
+
+    // set width & height of icon based on size of pixels
+    width : ($size * length(nth($matrix,1)));
+    height: ($size * length($matrix));
+
+    &:after{
+        content: '';
+
+        //position everything from the top left corner
+        position: absolute;
+        top: (-$size);
+        left: (-$size);
+        width: $size;
+        height: $size;
+
+        //this is where we make the stitch
+        box-shadow: pixelize($matrix, $size);
+    }
+}
+
+// Page Styling
+
+.icons{
+    list-style:none;
+    margin: 3em auto;
+    max-width :800px;
+    padding:0;
+    text-align: center;
+    width:100%;
+
+    li{
+        display:inline-block;
+        margin: 2em;
+    }
+
+    @each $key, $value in $pixel-art{
+        &--#{$key}{
+            @include style-item($value, $pixel-size);
+        }
+    }
+}
