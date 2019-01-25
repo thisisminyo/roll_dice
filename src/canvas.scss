@@ -1,6 +1,9 @@
 //Setting the colors we're syncing up with
 $pixel-color-map: (
-    'o' : red,
+    'p' : #ffcdd2,
+    'd' : #e57373,
+    'b' : #212121,
+    'w' : #ffffff,
     'x' : transparent 
 );
 
@@ -9,12 +12,27 @@ $pixel-size: 10px !default;
 
 //Pixel art matrix
 $pixel-art:(
-    diamond: (
-        (x x o x x)
-        (x o x o x)
-        (o x x x o)
-        (x o x o x)
-        (x x o x x)
+    rabbit: (
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w p p w w w w p p w w w w w w)
+        (w w w w w p p p w w w w p p p w w w w w)
+        (w w w w w p d p p w w p p d p w w w w w)
+        (w w w w w p d d p w w p d d p w w w w w)
+        (w w w w w p d d p w w p d d p w w w w w)
+        (w w w w w p d d p w w p d d p w w w w w)
+        (w w w w w p d d p w w p d d p w w w w w)
+        (w w w w w p d p p p p p p d p w w w w w)
+        (w w w w p p p p p p p p p p p p w w w w)
+        (w w w w p p p p p p p p p p p p p w w w)
+        (w w w p p b w p p p p p p b w p p w w w)
+        (w w p p p b b p p p p p p b b p p p w w)
+        (w w p p p p p p p d p p p p p p p p w w)
+        (w w p p p p p p p d p p p p p p p p w w)
+        (w w w p p p p d d d d d p p p p p w w w)
+        (w w w w p p p p p p p p p p p p w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
     ),
 );
 
@@ -82,7 +100,7 @@ $pixel-art:(
     text-align: center;
     width:100%;
 
-    li{
+    div{
         display:inline-block;
         margin: 2em;
     }
