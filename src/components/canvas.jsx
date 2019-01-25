@@ -20,8 +20,8 @@ class Canvas extends Component {
 
     render() {
         return (
-            <ul class="icons">
-                <li class="icons--diamond"></li>
+            <ul className="icons">
+                <li className="icons--diamond"></li>
             </ul>
         );
     }

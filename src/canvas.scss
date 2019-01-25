@@ -1,28 +1,27 @@
-/*
-.canvas{
-    width:200px;
-    height:200px;
+//Setting the colors we're syncing up with
+$pixel-color-map: (
+    'o' : red,
+    'x' : transparent 
+);
 
-    .pixel{
-        width:10px;
-        height:10px;
-        float:left;
-        box-shadow:0px 0px 1px #fff;
-    }
-}
-*/
+//Size of the pixels
+$pixel-size: 10px !default;
 
-// icon matrix we're reading through
-$diamond :  (o o x o o)
-            (o x o x o)
-            (x o o o x)
-            (o x o x o)
-            (o o x o o);
+//Pixel art matrix
+$pixel-art:(
+    diamond: (
+        (x x o x x)
+        (x o x o x)
+        (o x x x o)
+        (x o x o x)
+        (x x o x x)
+    ),
+);
 
-
-@function pixelize($matrix, $size : 10px, $color : red){
+//Function to read the matrix and pixelize it
+@function pixelize($matrix, $size){
     $l : length($matrix); //length of the entire
-    $shadows : ''; //shadows pixel section
+    $sh : ''; //shadows pixel section
     $i : $l; //length of the line on a matrix
 
     //read through the all the rows of the pixel
@@ -33,46 +32,64 @@ $diamond :  (o o x o o)
             $item : nth($row, $j); //itemize each element in that row
 
             //if that item is an x, give it a drop shadow square w/background color (this is where we're building the shadows list)
-            @if $item == x{
-                $shadows : $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + $color;
+            @if map-has-key($pixel-color-map, $item){
+                $sh : $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, $item);
             } @else {
-                $shadows : $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + transparent;
+                @warn 'there is no color specified in "pixel-color-map" for: "#{$item}"';
             }
 
             //when you get to the end of the row, add a comma before the next block of drop shadows
             @if not ($j == length($row) and $i == $l) {
-                $shadows : $shadows + ',';
+                $sh : $sh + ',';
             }
         }
     }
 
     //return the entire shadow list here
-    @return unqoute($shadows)
+    @return unquote($sh);
 }
 
+//Mixin to style each item
+@mixin style-item($matrix, $size) {
+    position: relative; // pixels stack next to each other
+
+    // set width & height of icon based on size of pixels
+    width : ($size * length(nth($matrix,1)));
+    height: ($size * length($matrix));
+
+    &:after{
+        content: '';
+
+        //position everything from the top left corner
+        position: absolute;
+        top: (-$size);
+        left: (-$size);
+        width: $size;
+        height: $size;
+
+        //this is where we make the stitch
+        box-shadow: pixelize($matrix, $size);
+    }
+}
+
+// Page Styling
 
 .icons{
-    margin:3em auto;
-    padding: 0;
-    width: 100%;
-    list-style: none;
+    list-style:none;
+    margin: 3em auto;
+    max-width :800px;
+    padding:0;
     text-align: center;
+    width:100%;
 
     li{
-        margin:1em;
-        display: inline-block;
-        position: relative;
+        display:inline-block;
+        margin: 2em;
     }
 
-    &--diamond {
-        &:after{
-            content: '';
-            position: absolute;
-            top: (-$size);
-            left: (-$size);
-            width: $size;
-            height: $size;
-            box-shadow: pixelize($diamond);
+    @each $key, $value in $pixel-art{
+        &--#{$key}{
+            @include style-item($value, $pixel-size);
         }
     }
 }
