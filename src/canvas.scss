@@ -1,0 +1,41 @@
+.canvas{
+    width:200px;
+    height:200px;
+
+    .pixel{
+        width:10px;
+        height:10px;
+        float:left;
+        box-shadow:0px 0px 1px #fff;
+    }
+}
+
+@function pixelize($matrix, $size : 10px, $color : red){
+    $l : length($matrix); //length of the entire
+    $shadows : ''; //shadows pixel section
+    $i : $l; //length of the line on a matrix
+
+    //read through the all the rows of the pixel
+    @for $i from 1 through $l {
+        $row : nth($matrix, $i); //this is a single row
+
+        @for $j from 1 through length($row){
+            $item : nth($row, $j); //itemize each element in that row
+
+            //if that item is an x, give it a drop shadow square w/background color (this is where we're building the shadows list)
+            @if $item == x{
+                $shadows : $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + $color;
+            } @else {
+                $shadows : $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + transparent;
+            }
+
+            //when you get to the end of the row, add a comma before the next block of drop shadows
+            @if not ($j == length($row) and $i == $l) {
+                $shadows : $shadows + ',';
+            }
+        }
+    }
+
+    //return the entire shadow list here
+    @return unqoute($shadows)
+}
