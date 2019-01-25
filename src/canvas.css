@@ -1,6 +1,5 @@
 .icons {
   list-style: none;
-  margin: 3em auto;
   max-width: 800px;
   padding: 0;
   text-align: center;
@@ -9,7 +8,8 @@
 
 .icons div {
   display: inline-block;
-  margin: 2em;
+  border-radius: 40px;
+  overflow: hidden;
 }
 
 .icons--rabbit {
