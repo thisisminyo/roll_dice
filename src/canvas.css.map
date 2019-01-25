@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,KAAK,EAAC,KAAK;EACX,MAAM,EAAC,KAAK;CAQf;;AAVD,AAII,OAJG,CAIH,MAAM,CAAA;EACF,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;EACX,KAAK,EAAC,IAAI;EACV,UAAU,EAAC,gBAAgB;CAC9B",
+    "mappings": "AAAA;;;;;;;;;;;;EAYE;AA0CF;;;;;;;;;;;;;;;;;;;;;;;;;;EA0BE",
     "sources": [
         "canvas.scss"
     ],

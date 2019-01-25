@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Canvas extends Component {
 
+    /*
     createCanvas = () => {
         let canvas = []
         let pixels = []
@@ -15,12 +16,13 @@ class Canvas extends Component {
 
         return canvas
     }
+    */
 
     render() {
         return (
-            <div>
-                {this.createCanvas()}
-            </div>
+            <ul class="icons">
+                <li class="icons--diamond"></li>
+            </ul>
         );
     }
 }

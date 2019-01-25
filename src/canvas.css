@@ -1,13 +1,41 @@
-.canvas {
-  width: 200px;
-  height: 200px;
-}
+/*
+.canvas{
+    width:200px;
+    height:200px;
 
-.canvas .pixel {
-  width: 10px;
-  height: 10px;
-  float: left;
-  -webkit-box-shadow: 0px 0px 1px #fff;
-          box-shadow: 0px 0px 1px #fff;
+    .pixel{
+        width:10px;
+        height:10px;
+        float:left;
+        box-shadow:0px 0px 1px #fff;
+    }
 }
+*/
+/*
+.icons{
+    margin:3em auto;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+
+    li{
+        margin:1em;
+        display: inline-block;
+        position: relative;
+    }
+
+    &--diamond {
+        &:after{
+            content: '';
+            position: absolute;
+            top: (-$icon-size-var);
+            left: (-$size);
+            width: $size;
+            height: $size;
+            box-shadow: pixelize($diamond);
+        }
+    }
+}
+*/
 /*# sourceMappingURL=canvas.css.map */
