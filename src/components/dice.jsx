@@ -5,7 +5,7 @@ class Dice extends Component {
     render() {
         return (
             <div className="dice">
-                <div className="side front"><Canvas /></div>
+                <div className="side front"></div>
                 <div className="side top"></div>
                 <div className="side left"></div>
                 <div className="side right"></div>

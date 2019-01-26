@@ -10,7 +10,7 @@ import './dice.css';
 
 
 //const element = <h1>Roll A Dice !</h1>
-ReactDOM.render(<Dice />, document.getElementById('root'));
+ReactDOM.render(<Canvas />, document.getElementById('root'));
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
