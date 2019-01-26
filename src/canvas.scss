@@ -2,7 +2,10 @@
 $pixel-color-map: (
     'p' : #ffcdd2,
     'd' : #e57373,
-    'b' : #212121,
+    'r' : #fc561f,
+    'n' : #652c07,
+    'y' : #fda929,
+    'b' : #2b2b2b,
     'w' : #ffffff,
     'x' : transparent 
 );
@@ -12,7 +15,7 @@ $pixel-size: 10px !default;
 
 //Pixel art matrix
 $pixel-art:(
-    rabbit: (
+    bunny: (
         (w w w w w w w w w w w w w w w w w w w w)
         (w w w w w w w w w w w w w w w w w w w w)
         (w w w w w w p p w w w w p p w w w w w w)
@@ -31,6 +34,72 @@ $pixel-art:(
         (w w p p p p p p p d p p p p p p p p w w)
         (w w w p p p p d d d d d p p p p p w w w)
         (w w w w p p p p p p p p p p p p w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+    ),
+    puppy: (
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w y w w y w w w w w w w w)
+        (w w w w w w w w y w y w w w w w w w w w)
+        (w w w w w n n w y y w w n n n n w w w w)
+        (w w w n n n n y y y y y n n n n n w w w)
+        (w w n n n n y y y y y y y n n n n n w w)
+        (w w n n n y y y y y y y y y n n n n n w)
+        (w n n n n y y y y y y y y y y n n n n w)
+        (w n n n y y y y y y y y y y y n n n n w)
+        (w n n n y n w y y y y y y n w n n n n w)
+        (w w n y y n n y y y y y y n n y n n w w)
+        (w w w y y y y y n n n y y y y y y w w w)
+        (w w y y y y y y n n n y y y y y y y w w)
+        (w w y y y y y y y n y y y y y y y y w w)
+        (w w w y y y y n n r n n y y y y y w w w)
+        (w w w w w y y y r r r y y y y w w w w w)
+        (w w w w w w w w r r r w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+    ),
+    kitty: (
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w b w w w w w w w w b w w w w w)
+        (w w w w b b b w w w w w w b b b w w w w)
+        (w w w w b d b b w w w w b b d b w w w w)
+        (w w w w b d d b w w w w b d d b w w w w)
+        (w w w w b b b b b b b b b b b b w w w w)
+        (w w w w b b b b b b b b b b b b b w w w)
+        (w w w b b b b b b b b b b b b b b w w w)
+        (w w w b b b b b b b b b b b b b b w w w)
+        (w w w b b b b b b b b b b b b b b b w w)
+        (w w b b b y w b b b b b b y w b b b w w)
+        (w w b b b y y b b b b b b y y b b b w w)
+        (w w b b b b b b b b b b b b b b b b w w)
+        (w w b b b b b b b b b b b b b b b b w w)
+        (w w b b b b b b b p b b b b b b b b w w)
+        (w w w b b b b b p b p b b b b b b w w w)
+        (w w w w w b b b b b b b b b b w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+    ),
+    teddy: (
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w n n n w w w w w w n n n w w w w)
+        (w w w w n y n w w w w w w n y n w w w w)
+        (w w w w n n n n n n n n n n n n w w w w)
+        (w w w w n n n n n n n n n n n n n w w w)
+        (w w w n n n n n n n n n n n n n n w w w)
+        (w w w n n n n n n n n n n n n n n w w w)
+        (w w w n n n n n n n n n n n n n n n w w)
+        (w w n n n n n n n n n n n n n n n n w w)
+        (w w n n b w n n n n n n n b w n n n w w)
+        (w w n n b b n n n n n n n b b n n n w w)
+        (w w n n n n n n b b b n n n n n n n w w)
+        (w w n n n n n n b b b n n n n n n n w w)
+        (w w n n n n n n n b n n n n n n n n w w)
+        (w w w n n n n n b n b n n n n n n w w w)
+        (w w w w n n n n n n n n n n n n w w w w)
+        (w w w w w n n n n n n n n n n w w w w w)
         (w w w w w w w w w w w w w w w w w w w w)
         (w w w w w w w w w w w w w w w w w w w w)
     ),
