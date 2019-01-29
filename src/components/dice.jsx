@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import Canvas from './canvas';
 
 class Dice extends Component {
     render() {
         return (
-            <div>
-                <div class="side front"></div>
-                <div class="side top"></div>
-                <div class="side left"></div>
-                <div class="side right"></div>
-                <div class="side bottom"></div>
-                <div class="side back"></div>
+            <div className="dice">
+                <div className="side front"></div>
+                <div className="side top"></div>
+                <div className="side left"></div>
+                <div className="side right"></div>
+                <div className="side bottom"></div>
+                <div className="side back"></div>
             </div>
         );
     }
