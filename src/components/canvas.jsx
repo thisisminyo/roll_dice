@@ -9,6 +9,8 @@ class Canvas extends Component {
                 <div className="icons--puppy"></div>
                 <div className="icons--kitty"></div>
                 <div className="icons--teddy"></div>
+                <div className="icons--hammy"></div>
+                <div className="icons--piggy"></div>
             </div>
         );
     }

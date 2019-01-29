@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Canvas from './components/canvas';
-import Dice from './components/dice';
 import './canvas.css';
 import './dice.css';
 //import App from './App';

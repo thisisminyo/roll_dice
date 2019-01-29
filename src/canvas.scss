@@ -5,6 +5,8 @@ $pixel-color-map: (
     'r' : #fc561f,
     'n' : #652c07,
     'y' : #fda929,
+    'l' : #fed172,
+    'g' : #5b5b5b,
     'b' : #2b2b2b,
     'w' : #ffffff,
     'x' : transparent 
@@ -103,6 +105,50 @@ $pixel-art:(
         (w w w w w w w w w w w w w w w w w w w w)
         (w w w w w w w w w w w w w w w w w w w w)
     ),
+    hammy: (
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w l l l w w w w l l l w w w w w)
+        (w w w w w l n l w w w w l n l w w w w w)
+        (w w w w w y y y y y y y y y y w w w w w)
+        (w w w w y y y y y y y y y y y y w w w w)
+        (w w w w y y y y y y y y y y y y w w w w)
+        (w w w w y y y y y y y y y y y y y w w w)
+        (w w w y y y y y y y y y y y y y y w w w)
+        (w w w y y y y y y y y y y y y y y w w w)
+        (w w y y y b w y y y y y y b w y y y w w)
+        (w w y y y b b y y y y y y b b y y y w w)
+        (w w y y y y y l l l l l y y y y y y w w)
+        (w w y y y y l l y y y l l l y y y y w w)
+        (w w y l l l l l n n n l l l l l l y w w)
+        (w w l l l l l l l n l l l l l l l l w w)
+        (w w w l l l l l n l n l l l l l l w w w)
+        (w w w w w l l l l l l l l l l w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+    ),
+    piggy: (
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w d w w w w w w w d w w w w w w)
+        (w w w d d d d d w w w w d d d d d w w w)
+        (w w d d d d d p p p p p p d d d d d w w)
+        (w w d d d d p p p p p p p p d d d d w w)
+        (w w d d d p p p p p p p p p p d d d w w)
+        (w w w d p p p p p p p p p p p p d w w w)
+        (w w w w p p p p p p p p p p p p w w w w)
+        (w w w w p p p p p p p p p p p p w w w w)
+        (w w w p p p p p p p p p p p p p p w w w)
+        (w w w p p b w p p p p p p b w p p w w w)
+        (w w p p p b b p p p p p p b b p p p w w)
+        (w w p p p p p p d d d p p p p p p p w w)
+        (w w p p p p p d p d p d p p p p p p w w)
+        (w w w p p p p p d d d p p p p p p w w w)
+        (w w w w w p p p p p p p p p p p w w w w)
+        (w w w w w w p p p p p p p p w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+        (w w w w w w w w w w w w w w w w w w w w)
+    ),
 );
 
 //Function to read the matrix and pixelize it
@@ -170,7 +216,7 @@ $pixel-art:(
 
     div{
         display:inline-block;
-        border-radius: 40px;
+        border-radius: 10px;
         overflow:hidden;
     }
 
