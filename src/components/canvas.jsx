@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 
 class Canvas extends Component {
+    state = {
+        animal_name: '',
+        tags: [bunny, puppy, kitty, teddy, piggy, hammy]
+    };
 
     render() {
         return (
             <div className="icons">
-                <div className="icons--bunny"></div>
-                <div className="icons--puppy"></div>
-                <div className="icons--kitty"></div>
-                <div className="icons--teddy"></div>
-                <div className="icons--hammy"></div>
-                <div className="icons--piggy"></div>
+                <div className={this.getAnimalName()}></div>
             </div>
         );
+    }
+
+    getAnimalName() {
+        let animal = "icons--";
     }
 }
 
