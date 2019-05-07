@@ -1,14 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import Dice from "./components/dice";
+
+import "./index.css";
 import "./canvas.css";
 import "./dice.css";
 //import App from './App';
 //import * as serviceWorker from './serviceWorker';
 
-//const element = <h1>Rolling A Dice !</h1>
-ReactDOM.render(<Dice />, document.getElementById("root"));
+ReactDOM.render(
+    <div>
+        <h1>Rolling A Dice!</h1>
+        <Dice />
+    </div>,
+    document.getElementById("root")
+);
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
