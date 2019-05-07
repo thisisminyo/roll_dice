@@ -1,5 +1,5 @@
 .dice {
-  position: absolute;
+  position: relative;
   width: 200px;
   height: 200px;
   -webkit-transform-style: preserve-3d;
@@ -46,6 +46,63 @@
 .dice .side.back {
   -webkit-transform: rotateX(-180deg) translateZ(100px);
           transform: rotateX(-180deg) translateZ(100px);
+}
+
+.dice .side.cover, .dice .side.inner {
+  background: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dice .side.cover {
+  border-radius: 0;
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+}
+
+.dice .side.cover.x {
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+.dice .side.cover.z {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+.dice .side.front {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.dice .side.front.inner {
+  -webkit-transform: translateZ(98px);
+          transform: translateZ(98px);
+}
+
+.dice .side.back.inner {
+  -webkit-transform: rotateX(-180deg) translateZ(98px);
+          transform: rotateX(-180deg) translateZ(98px);
+}
+
+.dice .side.right.inner {
+  -webkit-transform: rotateY(90deg) translateZ(98px);
+          transform: rotateY(90deg) translateZ(98px);
+}
+
+.dice .side.left.inner {
+  -webkit-transform: rotateY(-90deg) translateZ(98px);
+          transform: rotateY(-90deg) translateZ(98px);
+}
+
+.dice .side.top.inner {
+  -webkit-transform: rotateX(90deg) translateZ(98px);
+          transform: rotateX(90deg) translateZ(98px);
+}
+
+.dice .side.bottom.inner {
+  -webkit-transform: rotateX(-90deg) translateZ(98px);
+          transform: rotateX(-90deg) translateZ(98px);
 }
 
 @-webkit-keyframes spin {

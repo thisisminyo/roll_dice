@@ -1,179 +1,184 @@
 //Setting the colors we're syncing up with
 $pixel-color-map: (
-    'p' : #ffcdd2,
-    'd' : #e57373,
-    'r' : #fc561f,
-    'n' : #652c07,
-    'y' : #fda929,
-    'l' : #fed172,
-    'g' : #5b5b5b,
-    'b' : #2b2b2b,
-    'w' : #ffffff,
-    'x' : transparent 
+    "p": #ffcdd2,
+    "d": #e57373,
+    "r": #fc561f,
+    "n": #652c07,
+    "y": #fda929,
+    "l": #fed172,
+    "g": #5b5b5b,
+    "b": #2b2b2b,
+    "w": #ffffff,
+    "x": transparent
 );
 
 //Size of the pixels
 $pixel-size: 10px !default;
 
 //Pixel art matrix
-$pixel-art:(
+$pixel-art: (
     bunny: (
         (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w p p w w w w p p w w w w w w)
-        (w w w w w p p p w w w w p p p w w w w w)
-        (w w w w w p d p p w w p p d p w w w w w)
-        (w w w w w p d d p w w p d d p w w w w w)
-        (w w w w w p d d p w w p d d p w w w w w)
-        (w w w w w p d d p w w p d d p w w w w w)
-        (w w w w w p d d p w w p d d p w w w w w)
-        (w w w w w p d p p p p p p d p w w w w w)
-        (w w w w p p p p p p p p p p p p w w w w)
-        (w w w w p p p p p p p p p p p p p w w w)
-        (w w w p p b w p p p p p p b w p p w w w)
-        (w w p p p b b p p p p p p b b p p p w w)
-        (w w p p p p p p p d p p p p p p p p w w)
-        (w w p p p p p p p d p p p p p p p p w w)
-        (w w w p p p p d d d d d p p p p p w w w)
-        (w w w w p p p p p p p p p p p p w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w p p w w w w p p w w w w w w)
+            (w w w w w p p p w w w w p p p w w w w w)
+            (w w w w w p d p p w w p p d p w w w w w)
+            (w w w w w p d d p w w p d d p w w w w w)
+            (w w w w w p d d p w w p d d p w w w w w)
+            (w w w w w p d d p w w p d d p w w w w w)
+            (w w w w w p d d p w w p d d p w w w w w)
+            (w w w w w p d p p p p p p d p w w w w w)
+            (w w w w p p p p p p p p p p p p w w w w)
+            (w w w w p p p p p p p p p p p p p w w w)
+            (w w w p p b w p p p p p p b w p p w w w)
+            (w w p p p b b p p p p p p b b p p p w w)
+            (w w p p p p p p p d p p p p p p p p w w)
+            (w w p p p p p p p d p p p p p p p p w w)
+            (w w w p p p p d d d d d p p p p p w w w)
+            (w w w w p p p p p p p p p p p p w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
     ),
     puppy: (
         (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w y w w y w w w w w w w w)
-        (w w w w w w w w y w y w w w w w w w w w)
-        (w w w w w n n w y y w w n n n n w w w w)
-        (w w w n n n n y y y y y n n n n n w w w)
-        (w w n n n n y y y y y y y n n n n n w w)
-        (w w n n n y y y y y y y y y n n n n n w)
-        (w n n n n y y y y y y y y y y n n n n w)
-        (w n n n y y y y y y y y y y y n n n n w)
-        (w n n n y n w y y y y y y n w n n n n w)
-        (w w n y y n n y y y y y y n n y n n w w)
-        (w w w y y y y y n n n y y y y y y w w w)
-        (w w y y y y y y n n n y y y y y y y w w)
-        (w w y y y y y y y n y y y y y y y y w w)
-        (w w w y y y y n n r n n y y y y y w w w)
-        (w w w w w y y y r r r y y y y w w w w w)
-        (w w w w w w w w r r r w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w y w w y w w w w w w w w)
+            (w w w w w w w w y w y w w w w w w w w w)
+            (w w w w w n n w y y w w n n n n w w w w)
+            (w w w n n n n y y y y y n n n n n w w w)
+            (w w n n n n y y y y y y y n n n n n w w)
+            (w w n n n y y y y y y y y y n n n n n w)
+            (w n n n n y y y y y y y y y y n n n n w)
+            (w n n n y y y y y y y y y y y n n n n w)
+            (w n n n y n w y y y y y y n w n n n n w)
+            (w w n y y n n y y y y y y n n y n n w w)
+            (w w w y y y y y n n n y y y y y y w w w)
+            (w w y y y y y y n n n y y y y y y y w w)
+            (w w y y y y y y y n y y y y y y y y w w)
+            (w w w y y y y n n r n n y y y y y w w w)
+            (w w w w w y y y r r r y y y y w w w w w)
+            (w w w w w w w w r r r w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
     ),
     kitty: (
         (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w b w w w w w w w w b w w w w w)
-        (w w w w b b b w w w w w w b b b w w w w)
-        (w w w w b d b b w w w w b b d b w w w w)
-        (w w w w b d d b w w w w b d d b w w w w)
-        (w w w w b b b b b b b b b b b b w w w w)
-        (w w w w b b b b b b b b b b b b b w w w)
-        (w w w b b b b b b b b b b b b b b w w w)
-        (w w w b b b b b b b b b b b b b b w w w)
-        (w w w b b b b b b b b b b b b b b b w w)
-        (w w b b b y w b b b b b b y w b b b w w)
-        (w w b b b y y b b b b b b y y b b b w w)
-        (w w b b b b b b b b b b b b b b b b w w)
-        (w w b b b b b b b b b b b b b b b b w w)
-        (w w b b b b b b b p b b b b b b b b w w)
-        (w w w b b b b b p b p b b b b b b w w w)
-        (w w w w w b b b b b b b b b b w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w b w w w w w w w w b w w w w w)
+            (w w w w b b b w w w w w w b b b w w w w)
+            (w w w w b d b b w w w w b b d b w w w w)
+            (w w w w b d d b w w w w b d d b w w w w)
+            (w w w w b b b b b b b b b b b b w w w w)
+            (w w w w b b b b b b b b b b b b b w w w)
+            (w w w b b b b b b b b b b b b b b w w w)
+            (w w w b b b b b b b b b b b b b b w w w)
+            (w w w b b b b b b b b b b b b b b b w w)
+            (w w b b b y w b b b b b b y w b b b w w)
+            (w w b b b y y b b b b b b y y b b b w w)
+            (w w b b b b b b b b b b b b b b b b w w)
+            (w w b b b b b b b b b b b b b b b b w w)
+            (w w b b b b b b b p b b b b b b b b w w)
+            (w w w b b b b b p b p b b b b b b w w w)
+            (w w w w w b b b b b b b b b b w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
     ),
     teddy: (
         (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w n n n w w w w w w n n n w w w w)
-        (w w w w n y n w w w w w w n y n w w w w)
-        (w w w w n n n n n n n n n n n n w w w w)
-        (w w w w n n n n n n n n n n n n n w w w)
-        (w w w n n n n n n n n n n n n n n w w w)
-        (w w w n n n n n n n n n n n n n n w w w)
-        (w w w n n n n n n n n n n n n n n n w w)
-        (w w n n n n n n n n n n n n n n n n w w)
-        (w w n n b w n n n n n n n b w n n n w w)
-        (w w n n b b n n n n n n n b b n n n w w)
-        (w w n n n n n n b b b n n n n n n n w w)
-        (w w n n n n n n b b b n n n n n n n w w)
-        (w w n n n n n n n b n n n n n n n n w w)
-        (w w w n n n n n b n b n n n n n n w w w)
-        (w w w w n n n n n n n n n n n n w w w w)
-        (w w w w w n n n n n n n n n n w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w n n n w w w w w w n n n w w w w)
+            (w w w w n y n w w w w w w n y n w w w w)
+            (w w w w n n n n n n n n n n n n w w w w)
+            (w w w w n n n n n n n n n n n n n w w w)
+            (w w w n n n n n n n n n n n n n n w w w)
+            (w w w n n n n n n n n n n n n n n w w w)
+            (w w w n n n n n n n n n n n n n n n w w)
+            (w w n n n n n n n n n n n n n n n n w w)
+            (w w n n b w n n n n n n n b w n n n w w)
+            (w w n n b b n n n n n n n b b n n n w w)
+            (w w n n n n n n b b b n n n n n n n w w)
+            (w w n n n n n n b b b n n n n n n n w w)
+            (w w n n n n n n n b n n n n n n n n w w)
+            (w w w n n n n n b n b n n n n n n w w w)
+            (w w w w n n n n n n n n n n n n w w w w)
+            (w w w w w n n n n n n n n n n w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
     ),
     hammy: (
         (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w l l l w w w w l l l w w w w w)
-        (w w w w w l n l w w w w l n l w w w w w)
-        (w w w w w y y y y y y y y y y w w w w w)
-        (w w w w y y y y y y y y y y y y w w w w)
-        (w w w w y y y y y y y y y y y y w w w w)
-        (w w w w y y y y y y y y y y y y y w w w)
-        (w w w y y y y y y y y y y y y y y w w w)
-        (w w w y y y y y y y y y y y y y y w w w)
-        (w w y y y b w y y y y y y b w y y y w w)
-        (w w y y y b b y y y y y y b b y y y w w)
-        (w w y y y y y l l l l l y y y y y y w w)
-        (w w y y y y l l y y y l l l y y y y w w)
-        (w w y l l l l l n n n l l l l l l y w w)
-        (w w l l l l l l l n l l l l l l l l w w)
-        (w w w l l l l l n l n l l l l l l w w w)
-        (w w w w w l l l l l l l l l l w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w l l l w w w w l l l w w w w w)
+            (w w w w w l n l w w w w l n l w w w w w)
+            (w w w w w y y y y y y y y y y w w w w w)
+            (w w w w y y y y y y y y y y y y w w w w)
+            (w w w w y y y y y y y y y y y y w w w w)
+            (w w w w y y y y y y y y y y y y y w w w)
+            (w w w y y y y y y y y y y y y y y w w w)
+            (w w w y y y y y y y y y y y y y y w w w)
+            (w w y y y b w y y y y y y b w y y y w w)
+            (w w y y y b b y y y y y y b b y y y w w)
+            (w w y y y y y l l l l l y y y y y y w w)
+            (w w y y y y l l y y y l l l y y y y w w)
+            (w w y l l l l l n n n l l l l l l y w w)
+            (w w l l l l l l l n l l l l l l l l w w)
+            (w w w l l l l l n l n l l l l l l w w w)
+            (w w w w w l l l l l l l l l l w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
     ),
     piggy: (
         (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w d w w w w w w w d w w w w w w)
-        (w w w d d d d d w w w w d d d d d w w w)
-        (w w d d d d d p p p p p p d d d d d w w)
-        (w w d d d d p p p p p p p p d d d d w w)
-        (w w d d d p p p p p p p p p p d d d w w)
-        (w w w d p p p p p p p p p p p p d w w w)
-        (w w w w p p p p p p p p p p p p w w w w)
-        (w w w w p p p p p p p p p p p p w w w w)
-        (w w w p p p p p p p p p p p p p p w w w)
-        (w w w p p b w p p p p p p b w p p w w w)
-        (w w p p p b b p p p p p p b b p p p w w)
-        (w w p p p p p p d d d p p p p p p p w w)
-        (w w p p p p p d p d p d p p p p p p w w)
-        (w w w p p p p p d d d p p p p p p w w w)
-        (w w w w w p p p p p p p p p p p w w w w)
-        (w w w w w w p p p p p p p p w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-        (w w w w w w w w w w w w w w w w w w w w)
-    ),
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w d w w w w w w w d w w w w w w)
+            (w w w d d d d d w w w w d d d d d w w w)
+            (w w d d d d d p p p p p p d d d d d w w)
+            (w w d d d d p p p p p p p p d d d d w w)
+            (w w d d d p p p p p p p p p p d d d w w)
+            (w w w d p p p p p p p p p p p p d w w w)
+            (w w w w p p p p p p p p p p p p w w w w)
+            (w w w w p p p p p p p p p p p p w w w w)
+            (w w w p p p p p p p p p p p p p p w w w)
+            (w w w p p b w p p p p p p b w p p w w w)
+            (w w p p p b b p p p p p p b b p p p w w)
+            (w w p p p p p p d d d p p p p p p p w w)
+            (w w p p p p p d p d p d p p p p p p w w)
+            (w w w p p p p p d d d p p p p p p w w w)
+            (w w w w w p p p p p p p p p p p w w w w)
+            (w w w w w w p p p p p p p p w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+            (w w w w w w w w w w w w w w w w w w w w)
+    )
 );
 
 //Function to read the matrix and pixelize it
-@function pixelize($matrix, $size){
-    $l : length($matrix); //length of the entire
-    $sh : ''; //shadows pixel section
-    $i : $l; //length of the line on a matrix
+@function pixelize($matrix, $size) {
+    $l: length($matrix); //length of the entire
+    $sh: ""; //shadows pixel section
+    $i: $l; //length of the line on a matrix
 
     //read through the all the rows of the pixel
     @for $i from 1 through $l {
-        $row : nth($matrix, $i); //this is a single row
+        $row: nth($matrix, $i); //this is a single row
 
-        @for $j from 1 through length($row){
-            $item : nth($row, $j); //itemize each element in that row
+        @for $j from 1 through length($row) {
+            $item: nth($row, $j); //itemize each element in that row
 
             //if that item is an x, give it a drop shadow square w/background color (this is where we're building the shadows list)
-            @if map-has-key($pixel-color-map, $item){
-                $sh : $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, $item);
+            @if map-has-key($pixel-color-map, $item) {
+                $sh: $sh +
+                    ($j * $size) +
+                    " " +
+                    ($i * $size) +
+                    " " +
+                    map-get($pixel-color-map, $item);
             } @else {
                 @warn 'there is no color specified in "pixel-color-map" for: "#{$item}"';
             }
 
             //when you get to the end of the row, add a comma before the next block of drop shadows
-            @if not ($j == length($row) and $i == $l) {
-                $sh : $sh + ',';
+            @if not($j == length($row) and $i == $l) {
+                $sh: $sh + ",";
             }
         }
     }
@@ -187,11 +192,11 @@ $pixel-art:(
     position: relative; // pixels stack next to each other
 
     // set width & height of icon based on size of pixels
-    width : ($size * length(nth($matrix,1)));
+    width: ($size * length(nth($matrix, 1)));
     height: ($size * length($matrix));
 
-    &:after{
-        content: '';
+    &:after {
+        content: "";
 
         //position everything from the top left corner
         position: absolute;
@@ -207,21 +212,21 @@ $pixel-art:(
 
 // Page Styling
 
-.icons{
-    list-style:none;
-    max-width :800px;
-    padding:0;
+.icons {
+    list-style: none;
+    max-width: 800px;
+    padding: 0;
     text-align: center;
-    width:100%;
+    width: 100%;
 
-    div{
-        display:inline-block;
-        border-radius: 10px;
-        overflow:hidden;
+    div {
+        display: inline-block;
+        border-radius: 40px;
+        overflow: hidden;
     }
 
-    @each $key, $value in $pixel-art{
-        &--#{$key}{
+    @each $key, $value in $pixel-art {
+        &--#{$key} {
             @include style-item($value, $pixel-size);
         }
     }

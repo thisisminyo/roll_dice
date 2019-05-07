@@ -8,7 +8,7 @@
 
 .icons div {
   display: inline-block;
-  border-radius: 10px;
+  border-radius: 40px;
   overflow: hidden;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .icons--bunny:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -36,7 +36,7 @@
 }
 
 .icons--puppy:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -53,7 +53,7 @@
 }
 
 .icons--kitty:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -70,7 +70,7 @@
 }
 
 .icons--teddy:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -87,7 +87,7 @@
 }
 
 .icons--hammy:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -104,7 +104,7 @@
 }
 
 .icons--piggy:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;

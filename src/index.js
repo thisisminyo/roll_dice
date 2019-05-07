@@ -1,15 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Canvas from './components/canvas';
-import './canvas.css';
-import './dice.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Dice from "./components/dice";
+import "./canvas.css";
+import "./dice.css";
 //import App from './App';
 //import * as serviceWorker from './serviceWorker';
 
-
-//const element = <h1>Roll A Dice !</h1>
-ReactDOM.render(<Canvas />, document.getElementById('root'));
+//const element = <h1>Rolling A Dice !</h1>
+ReactDOM.render(<Dice />, document.getElementById("root"));
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
